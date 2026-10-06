@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0d5132">
+<title>Majlis Atfal-ul-Ahmadiyya B.B. Anggerik</title>
+<style>
+:root{--g:#0d5132;--gd:#073a23;--gl:#eaf5ee;--gold:#c99e43;--bg:#f5f8f6;--card:#fff;--text:#183529;--muted:#6b7b72;--line:#dfe8e2;--danger:#b33b3b;--shadow:0 12px 35px #153b2410}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);background:var(--bg)}button,input,textarea,select{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
+.hidden{display:none!important}.app{min-height:100vh}.top{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 24px;position:sticky;top:0;z-index:30}.brand{display:flex;gap:11px;align-items:center}.mark{width:43px;height:43px;border-radius:13px;background:linear-gradient(145deg,#e0bc64,#a77822);display:grid;place-items:center;color:#fff;font-size:25px;font-weight:700}.brand b{display:block;font-size:14px}.brand small{color:var(--muted);font-size:11px}.topright{margin-left:auto;display:flex;gap:12px;align-items:center}.hello{font-size:13px;color:var(--muted)}.avatar{width:38px;height:38px;border:0;border-radius:50%;background:var(--gl);color:var(--g);font-weight:800}.menu{display:none;border:0;background:transparent;padding:8px}
+.side{position:fixed;top:72px;left:0;bottom:0;width:238px;background:var(--gd);padding:24px 13px;z-index:20;display:flex;flex-direction:column}.side-label{color:#91b19f;font-size:10px;font-weight:800;letter-spacing:.16em;padding:0 12px 12px}.nav{border:0;background:transparent;color:#c7d9ce;padding:12px;border-radius:10px;text-align:left;display:flex;align-items:center;gap:11px;margin:2px 0}.nav:hover,.nav.active{background:#ffffff12;color:#fff}.nav.active{box-shadow:inset 3px 0 var(--gold)}.push{flex:1}.nav.logout{color:#f0caca}.main{margin-left:238px;padding:40px 45px;max-width:1300px}.head{margin-bottom:25px}.eyebrow{font-size:10px;font-weight:900;letter-spacing:.17em;color:#98742d;margin-bottom:8px}.head h1{margin:0;font-size:32px}.head p{color:var(--muted);margin:7px 0 0;line-height:1.6}.hero{background:linear-gradient(120deg,#0b472b,#17623e);color:#fff;border-radius:22px;padding:34px;display:flex;justify-content:space-between;align-items:center;overflow:hidden}.hero .eyebrow{color:#e5c778}.hero h2{font-size:34px;margin:10px 0}.hero p{max-width:680px;color:#d5e6db;line-height:1.65}.hero-mark{font-size:115px;opacity:.15;padding:0 35px}.pill,.tag{display:inline-block;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.08em}.pill{background:#ffffff1c}.tag{background:var(--gl);color:var(--g)}
+.grid{display:grid;gap:16px}.three{grid-template-columns:repeat(3,1fr)}.two{grid-template-columns:repeat(2,1fr)}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:20px;box-shadow:var(--shadow)}.stats{margin-top:16px}.stat{display:flex;gap:14px;align-items:center}.ico{width:43px;height:43px;border-radius:12px;background:var(--gl);display:grid;place-items:center;color:var(--g);font-size:20px}.stat small,.muted{display:block;color:var(--muted)}.stat strong{display:block;font-size:18px;margin:3px 0}.section{margin-top:31px}.section h2{font-size:20px}.quick{min-height:150px;position:relative}.quick h3{margin:16px 0 5px}.quick p{font-size:13px;line-height:1.5;color:var(--muted)}.arrow{position:absolute;right:17px;bottom:16px;color:#9aa9a0}
+.prayer{display:flex;gap:13px;align-items:center}.prayer .picon{font-size:25px;color:#b58a31}.prayer h3{margin:0}.prayer p{margin:4px 0;color:var(--muted);font-size:12px}.prayer .tag{margin-left:auto}.notice{margin-top:18px;padding:15px;border-radius:12px;background:#edf7ef;border:1px solid #d7eadc}.notice b{display:block}.notice p{margin:5px 0;color:var(--muted);font-size:13px}
+.program h3,.announce h2{margin:15px 0 7px}.program p,.announce p{color:var(--muted);line-height:1.6;font-size:13px}.link{border:0;background:none;color:var(--g);font-weight:800;padding:0;margin-top:15px}.stack{display:grid;gap:15px;max-width:850px}.form-card{max-width:850px}.success{padding:12px;background:#edf7ef;border:1px solid #d4e9d9;border-radius:10px;color:#24613e;margin-bottom:14px}.error{padding:12px;background:#fff0f0;border:1px solid #edcccc;border-radius:10px;color:#9b3333;margin-bottom:14px}.story{max-width:900px}.story-mark{width:72px;height:72px;border-radius:20px;background:var(--g);color:#fff;display:grid;place-items:center;font-size:40px;margin-bottom:18px}.story p{color:var(--muted);line-height:1.8}.timeline{border-left:2px solid #d9e5dd;margin:25px 0 0 7px;padding-left:22px;display:grid;gap:22px}.timeline span{display:block;color:var(--muted);font-size:13px;margin-top:5px}.gallery{grid-template-columns:repeat(3,1fr)}.gallery .photo{height:180px;border-radius:16px;background:linear-gradient(135deg,#0d5132,#75a68b);color:#fff;display:grid;place-items:center;font-size:45px}.empty{text-align:center;padding:70px 20px;border:2px dashed #d3e0d7;border-radius:18px;color:var(--muted)}.profile{display:flex;gap:20px;align-items:center;max-width:700px}.bigavatar{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--gl);color:var(--g);font-size:30px;font-weight:800}
+label{display:grid;gap:7px;font-size:13px;font-weight:700;margin:15px 0}input,textarea,select{width:100%;padding:12px 13px;border:1px solid var(--line);background:#fbfcfb;border-radius:11px;outline:0}input:focus,textarea:focus,select:focus{border-color:#75a98c;box-shadow:0 0 0 3px #0d513212}.btn{border:0;border-radius:11px;padding:12px 17px;font-weight:800}.primary{background:var(--g);color:#fff}.secondary{background:var(--gl);color:var(--g)}.danger{background:#fff0f0;color:var(--danger)}.full{width:100%}.row{display:flex;gap:10px;align-items:center}.row>*{flex:1}
+.login{min-height:100vh;display:grid;place-items:center;padding:22px;background:radial-gradient(circle at top right,#dcefe3,transparent 40%),var(--bg)}.loginbox{width:min(460px,100%);background:#fff;border:1px solid var(--line);border-radius:24px;padding:35px;box-shadow:0 22px 65px #153b2414}.loginbrand{display:flex;align-items:center;gap:12px;margin-bottom:30px}.loginbrand h1{font-size:20px;margin:0}.loginbrand p{font-size:12px;color:var(--muted);margin:3px 0}.loginbox h2{font-size:29px;margin:0 0 7px}.loginbox .muted{line-height:1.6}.hint{font-size:12px;color:var(--muted);margin-top:14px}.smallbtn{border:0;background:none;color:var(--g);font-weight:800;padding:13px 0}.adminbar{background:#fff7df;border:1px solid #ead9a7;padding:12px 14px;border-radius:12px;margin-bottom:18px;color:#74591f;font-size:13px}
+.tablewrap{overflow:auto}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid var(--line);white-space:nowrap}.table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}.toast{position:fixed;right:20px;bottom:20px;background:#173b29;color:#fff;padding:13px 17px;border-radius:11px;box-shadow:0 12px 30px #0003;z-index:99}
+@media(max-width:850px){.menu{display:block}.side{transform:translateX(-100%);transition:.2s}.side.open{transform:translateX(0)}.main{margin-left:0;padding:30px 17px}.hello{display:none}.three,.two,.gallery{grid-template-columns:1fr}.hero{padding:26px}.hero h2{font-size:27px}.hero-mark{display:none}.head h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+/* ============================================================
+   MAJLIS ATFAL-UL-AHMADIYYA B.B. ANGGERIK
+   SINGLE-FILE WEBSITE
+   ------------------------------------------------------------
+   This version is a complete front-end prototype.
+   It stores demo accounts/content in the browser so it can run
+   immediately from one index.html file.
+
+   For a production deployment, replace the demo authentication
+   with Supabase Auth + server-side/admin account provisioning.
+   NEVER put a Supabase service-role key in this file.
+   ============================================================ */
+
+const STORE="atfal_bb_anggerik_v1";
+const DEFAULT={
+  accounts:[
+    {id:"admin-1",username:"admin",password:"admin123",name:"Super Admin",role:"admin"},
+    {id:"atfal-1",username:"ATFAL001",password:"atfal123",name:"Atfal Member",role:"atfal"}
+  ],
+  programs:[
+    {id:1,title:"Tarbiyyat Class",date:"Every Saturday",time:"After Maghrib",desc:"Weekly tarbiyyat and moral training."},
+    {id:2,title:"Ta'leem Session",date:"Every Sunday",time:"After Asr",desc:"Learning, reading and discussion."},
+    {id:3,title:"Sports & Sehat",date:"Every Sunday",time:"5:00 PM",desc:"Healthy activities and sports."}
+  ],
+  announcements:[
+    {id:1,title:"Welcome to the Atfal Portal",type:"IMPORTANT",body:"This portal keeps Atfal connected with programmes, learning, worship and Majlis activities."},
+    {id:2,title:"Take part in Majlis activities",type:"GENERAL",body:"Check the Programs section regularly for upcoming activities."}
+  ],
+  prayers:[
+    {name:"Fajr",time:"Set by administrator",note:"Before sunrise"},
+    {name:"Zuhr",time:"Set by administrator",note:"After midday"},
+    {name:"Asr",time:"Set by administrator",note:"Afternoon"},
+    {name:"Maghrib",time:"Set by administrator",note:"After sunset"},
+    {name:"Isha",time:"Set by administrator",note:"Night"},
+    {name:"Jumma",time:"Set by administrator",note:"Friday prayer"}
+  ],
+  feedback:[],
+  history:[
+    {year:"Milestone",title:"Majlis milestone",body:"Add a verified milestone of Majlis Atfal B.B. Anggerik here."},
+    {year:"Programme",title:"Important programme",body:"Add an important programme or event here."},
+    {year:"Legacy",title:"Stories of Atfal",body:"Add inspiring stories of Atfal here."}
+  ],
+  gallery:[]
+};
+
+function load(){
+  try{
+    const saved=JSON.parse(localStorage.getItem(STORE));
+    return saved||structuredClone(DEFAULT);
+  }catch(e){return structuredClone(DEFAULT)}
+}
+let db=load();
+let current=null;
+let page="home";
+let menuOpen=false;
+
+function save(){localStorage.setItem(STORE,JSON.stringify(db))}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+function initials(name){return (name||"A").trim().split(/\s+/).map(x=>x[0]).slice(0,2).join("").toUpperCase()}
+function toast(msg){const x=document.createElement("div");x.className="toast";x.textContent=msg;document.body.appendChild(x);setTimeout(()=>x.remove(),2500)}
+function icon(x){return `<span style="font-size:19px">${x}</span>`}
+
+function login(){
+  document.getElementById("root").innerHTML=`
+  <div class="login">
+    <div class="loginbox">
+      <div class="loginbrand"><div class="mark">م</div><div><h1>Majlis Atfal</h1><p>B.B. Anggerik</p></div></div>
+      <div class="eyebrow">ATFAL PORTAL</div>
+      <h2>Welcome back</h2>
+      <p class="muted">Sign in with the username and password provided by the Majlis.</p>
+      <form id="loginForm">
+        <label>Username<input id="username" autocomplete="username" placeholder="e.g. ATFAL001" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" placeholder="Your password" required></label>
+        <div id="loginError" class="error hidden"></div>
+        <button class="btn primary full">Sign in</button>
+      </form>
+      <p class="hint">Accounts are created and managed by the administrator.</p>
+      <p class="hint"><b>Demo:</b> ATFAL001 / atfal123 &nbsp; • &nbsp; admin / admin123</p>
+    </div>
+  </div>`;
+  document.getElementById("loginForm").onsubmit=e=>{
+    e.preventDefault();
+    const u=document.getElementById("username").value.trim();
+    const p=document.getElementById("password").value;
+    const a=db.accounts.find(x=>x.username.toLowerCase()===u.toLowerCase()&&x.password===p);
+    if(!a){const er=document.getElementById("loginError");er.textContent="Invalid username or password.";er.classList.remove("hidden");return}
+    current={...a}; render();
+  };
+}
+
+const nav=[
+  ["home","🏠","Dashboard"],["namaz","☪","Namaz & Jumma"],["programs","📅","Programs"],
+  ["announcements","🔔","Announcements"],["feedback","💬","Feedback"],["history","📖","History"],
+  ["gallery","🖼️","Gallery"],["profile","👤","My Profile"]
+];
+
+function shell(content){
+  document.getElementById("root").innerHTML=`
+  <div class="app">
+    <header class="top">
+      <button class="menu" onclick="toggleMenu()">☰</button>
+      <div class="brand"><div class="mark">م</div><div><b>Majlis Atfal</b><small>B.B. Anggerik</small></div></div>
+      <div class="topright"><span class="hello">Assalamu Alaikum, ${esc(current.name.split(" ")[0])}</span><button class="avatar" onclick="go('profile')">${esc(initials(current.name))}</button></div>
+    </header>
+    <aside id="side" class="side ${menuOpen?'open':''}">
+      <div class="side-label">ATFAL PORTAL</div>
+      ${nav.map(n=>`<button class="nav ${page===n[0]?'active':''}" onclick="go('${n[0]}')">${icon(n[1])}${n[2]}</button>`).join("")}
+      ${current.role==="admin"?`<div class="side-label" style="margin-top:18px">ADMINISTRATION</div><button class="nav ${page==="admin"?'active':''}" onclick="go('admin')">⚙️ Admin Dashboard</button>`:""}
+      <div class="push"></div>
+      <button class="nav logout" onclick="logout()">↪ Sign out</button>
+    </aside>
+    <main class="main">${content}</main>
+  </div>`;
+}
+function toggleMenu(){menuOpen=!menuOpen;render()}
+function go(p){page=p;menuOpen=false;render()}
+function logout(){current=null;page="home";login()}
+
+function head(ey,title,text){return `<div class="head"><div class="eyebrow">${ey}</div><h1>${title}</h1><p>${text||""}</p></div>`}
+function render(){
+  if(!current){login();return}
+  let c="";
+  if(page==="home")c=dashboard();
+  else if(page==="namaz")c=namaz();
+  else if(page==="programs")c=programs();
+  else if(page==="announcements")c=announcements();
+  else if(page==="feedback")c=feedback();
+  else if(page==="history")c=historyPage();
+  else if(page==="gallery")c=gallery();
+  else if(page==="profile")c=profile();
+  else if(page==="admin"&&current.role==="admin")c=admin();
+  else c=dashboard();
+  shell(c);
+}
+
+function dashboard(){
+ return head("ASSALAMU ALAIKUM","Your Atfal Dashboard","Stay connected with your Majlis, programmes and daily worship.")+
+ `<section class="hero"><div><span class="pill">MAJLIS ATFAL-UL-AHMADIYYA</span><h2>Learn. Pray. Serve. Grow.</h2><p>A place for Atfal to learn about faith, take part in programmes and build a strong connection with the Jamaat.</p></div><div class="hero-mark">م</div></section>
+ <div class="grid three stats">
+   <div class="card stat"><div class="ico">☪</div><div><small>Today's Focus</small><strong>Namaz</strong><small>Keep your prayers on time</small></div></div>
+   <div class="card stat"><div class="ico">📅</div><div><small>Upcoming</small><strong>${db.programs.length} Programs</strong><small>Available in the portal</small></div></div>
+   <div class="card stat"><div class="ico">✨</div><div><small>Your Journey</small><strong>Keep growing</strong><small>Every day matters</small></div></div>
+ </div>
+ <div class="section"><h2>Quick Access</h2><div class="grid three">
+   <div class="card quick" onclick="go('namaz')"><div class="ico">☪</div><h3>Namaz & Jumma</h3><p>Prayer information and reminders.</p><span class="arrow">›</span></div>
+   <div class="card quick" onclick="go('programs')"><div class="ico">📅</div><h3>Programs</h3><p>See upcoming Majlis activities.</p><span class="arrow">›</span></div>
+   <div class="card quick" onclick="go('feedback')"><div class="ico">💬</div><h3>Give Feedback</h3><p>Share your ideas with Nazim Atfal.</p><span class="arrow">›</span></div>
+ </div></div>`;
+}
+
+function namaz(){
+ return head("IBADAT","Namaz & Jumma","Prayer information managed by the Majlis administrator.")+
+ `<div class="grid three">${db.prayers.map(p=>`<div class="card prayer"><div class="picon">☪</div><div><h3>${esc(p.name)}</h3><p>${esc(p.note)}</p></div><span class="tag">${esc(p.time)}</span></div>`).join("")}</div>
+ <div class="notice"><b>Prayer reminder</b><p>Prayer times should always be checked against the official local timetable.</p></div>`;
+}
+
+function programs(){
+ return head("MAJLIS ACTIVITIES","Programs","Upcoming activities and departmental programmes.")+
+ `<div class="grid three">${db.programs.map(p=>`<div class="card program"><div class="ico">📅</div><h3>${esc(p.title)}</h3><p>${esc(p.date)}<br><b>${esc(p.time)}</b></p><p>${esc(p.desc)}</p></div>`).join("")}</div>`;
+}
+
+function announcements(){
+ return head("LATEST NEWS","Announcements","Important messages from Majlis Atfal B.B. Anggerik.")+
+ `<div class="stack">${db.announcements.map(a=>`<article class="card announce"><span class="tag">${esc(a.type)}</span><h2>${esc(a.title)}</h2><p>${esc(a.body)}</p><small class="muted">Majlis Atfal-ul-Ahmadiyya B.B. Anggerik</small></article>`).join("")}</div>`;
+}
+
+function feedback(){
+ const mine=db.feedback.filter(x=>x.userId===current.id);
+ return head("YOUR VOICE MATTERS","Feedback","Send suggestions, ideas or feedback to Majlis Atfal.")+
+ `<div class="card form-card"><form id="feedbackForm"><label>Your feedback<textarea id="fb" rows="7" placeholder="Write your feedback here..." required></textarea></label><button class="btn primary">Submit feedback</button></form></div>
+ <div class="section"><h2>Your previous feedback</h2><div class="stack">${mine.length?mine.map(f=>`<div class="card"><p>${esc(f.message)}</p><small class="muted">${new Date(f.created).toLocaleString()}</small></div>`).join(""):`<div class="card muted">No feedback submitted yet.</div>`}</div></div>`;
+}
+function bindFeedback(){
+ const f=document.getElementById("feedbackForm");if(!f)return;
+ f.onsubmit=e=>{e.preventDefault();const m=document.getElementById("fb").value.trim();if(!m)return;db.feedback.push({id:Date.now(),userId:current.id,username:current.username,name:current.name,message:m,created:new Date().toISOString()});save();toast("Feedback submitted successfully");render()}
+}
+
+function historyPage(){
+ return head("OUR STORY","History of Majlis Atfal B.B. Anggerik","A dedicated space for verified history, milestones and stories.")+
+ `<div class="card story"><div class="story-mark">م</div><h2>Our Legacy</h2><p>Use this section to preserve the history of Majlis Atfal-ul-Ahmadiyya B.B. Anggerik, important milestones, exhibitions, programmes, service activities and inspiring stories of Atfal.</p><div class="timeline">${db.history.map(x=>`<div><b>${esc(x.year)} — ${esc(x.title)}</b><span>${esc(x.body)}</span></div>`).join("")}</div></div>`;
+}
+
+function gallery(){
+ return head("MEMORIES","Gallery","Photos and memories from Majlis activities.")+
+ (db.gallery.length?`<div class="grid gallery">${db.gallery.map(x=>`<div class="photo" style="background-image:url('${esc(x.url)}');background-size:cover;background-position:center" title="${esc(x.title)}">🖼️</div>`).join("")}</div>`:
+ `<div class="empty"><div style="font-size:45px">🖼️</div><h2>Gallery coming soon</h2><p>The administrator can add gallery items from the Admin Dashboard.</p></div>`);
+}
+
+function profile(){
+ return head("ACCOUNT","My Profile","Your Atfal account information.")+
+ `<div class="card profile"><div class="bigavatar">${esc(initials(current.name))}</div><div><h2>${esc(current.name)}</h2><p class="muted">@${esc(current.username)}</p><span class="tag">${current.role==="admin"?"SUPER ADMIN":"ATFAL"}</span></div></div>`;
+}
+
+function admin(){
+ return head("ADMINISTRATION","Super Admin Dashboard","Manage Atfal accounts and portal content.")+
+ `<div class="adminbar">⚠️ This single-file version stores data in this browser. For production, move account management and data to Supabase with Row Level Security and server-side admin functions.</div>
+ <div class="grid three stats">
+   <div class="card stat"><div class="ico">👥</div><div><small>Accounts</small><strong>${db.accounts.length}</strong></div></div>
+   <div class="card stat"><div class="ico">💬</div><div><small>Feedback</small><strong>${db.feedback.length}</strong></div></div>
+   <div class="card stat"><div class="ico">📅</div><div><small>Programs</small><strong>${db.programs.length}</strong></div></div>
+ </div>
+ <div class="section grid two">
+  <div class="card"><h2>Create Atfal Account</h2><form id="accountForm">
+    <label>Full name<input id="aname" required placeholder="Atfal full name"></label>
+    <label>Username<input id="auser" required placeholder="ATFAL002"></label>
+    <label>Password<input id="apass" required minlength="6" placeholder="Minimum 6 characters"></label>
+    <button class="btn primary">Create account</button>
+  </form></div>
+  <div class="card"><h2>Add Announcement</h2><form id="announceForm">
+    <label>Title<input id="ntitle" required></label>
+    <label>Type<select id="ntype"><option>IMPORTANT</option><option>GENERAL</option><option>EVENT</option></select></label>
+    <label>Message<textarea id="nbody" rows="4" required></textarea></label>
+    <button class="btn primary">Publish announcement</button>
+  </form></div>
+ </div>
+ <div class="section card"><h2>Atfal Accounts</h2><div class="tablewrap"><table class="table"><thead><tr><th>Name</th><th>Username</th><th>Role</th><th>Action</th></tr></thead><tbody>${db.accounts.map(a=>`<tr><td>${esc(a.name)}</td><td>${esc(a.username)}</td><td>${esc(a.role)}</td><td>${a.id!=="admin-1"?`<button class="btn danger" onclick="deleteAccount('${a.id}')">Delete</button>`:"Protected"}</td></tr>`).join("")}</tbody></table></div></div>
+ <div class="section card"><h2>Feedback — Who submitted it?</h2><div class="tablewrap"><table class="table"><thead><tr><th>Atfal</th><th>Username</th><th>Feedback</th><th>Date</th></tr></thead><tbody>${db.feedback.length?db.feedback.map(f=>`<tr><td>${esc(f.name)}</td><td>${esc(f.username)}</td><td>${esc(f.message)}</td><td>${new Date(f.created).toLocaleString()}</td></tr>`).join(""):`<tr><td colspan="4">No feedback yet.</td></tr>`}</tbody></table></div></div>
+ <div class="section card"><h2>Namaz / Jumma Settings</h2><div class="grid two">${db.prayers.map((p,i)=>`<label>${esc(p.name)}<input id="pt${i}" value="${esc(p.time)}"></label>`).join("")}</div><button class="btn primary" onclick="savePrayers()">Save prayer information</button></div>
+ <div class="section card"><h2>Programs</h2><div class="stack">${db.programs.map(p=>`<div style="border-bottom:1px solid var(--line);padding:12px 0"><b>${esc(p.title)}</b><p class="muted">${esc(p.date)} · ${esc(p.time)}</p></div>`).join("")}</div></div>`;
+}
+
+function bindAdmin(){
+ const af=document.getElementById("accountForm");
+ if(af)af.onsubmit=e=>{e.preventDefault();const name=document.getElementById("aname").value.trim(),u=document.getElementById("auser").value.trim(),p=document.getElementById("apass").value;if(db.accounts.some(a=>a.username.toLowerCase()===u.toLowerCase())){toast("Username already exists");return}db.accounts.push({id:"a-"+Date.now(),username:u,password:p,name,role:"atfal"});save();toast("Atfal account created");render()};
+ const nf=document.getElementById("announceForm");
+ if(nf)nf.onsubmit=e=>{e.preventDefault();db.announcements.unshift({id:Date.now(),title:document.getElementById("ntitle").value.trim(),type:document.getElementById("ntype").value,body:document.getElementById("nbody").value.trim()});save();toast("Announcement published");render()};
+}
+function deleteAccount(id){if(!confirm("Delete this Atfal account?"))return;db.accounts=db.accounts.filter(a=>a.id!==id);save();render()}
+function savePrayers(){db.prayers.forEach((p,i)=>p.time=document.getElementById("pt"+i).value);save();toast("Prayer information saved");render()}
+
+const oldRender=render;
+render=function(){
+  oldRender();
+  if(page==="feedback")bindFeedback();
+  if(page==="admin"&&current?.role==="admin")bindAdmin();
+};
+
+render();
+</script>
+</body>
+</html>
